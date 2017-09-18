@@ -1,0 +1,91 @@
+// Colors
+$blue: #2C97DE
+$red: #FF3F3A
+$yellow: #FDC62D
+$white-gray: #F1F3F5
+$green: #6EC02F
+$dark-navy: #3A434D
+$gray: #C9D3DC
+
+body, h1, h2, p, ul, li 
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+body
+  background-color: #f1f1f1
+  font-size: 13pt
+  *
+    color: #444444
+    box-sizing: border-box
+h2 
+  margin-bottom: 3rem
+  font-weight: lighter
+  font-size: 2.5rem
+
+p
+  margin: 1.5rem 0
+  line-height: 1.7rem
+  color: #666666
+  strong
+    font-weight: normal
+    color: $blue
+
+.left
+  position: fixed  
+  min-width: 399px
+  height: 100vh
+  background: white
+  padding: 60px
+  border-right: 1px solid darken($white-gray, 7%)
+  h1
+    font-weight: lighter
+    .logo
+      width: 107px
+  .post-nav
+    margin: 2rem 0
+    li
+      padding: 0.5rem 0
+      cursor: default
+      transition: all .2s
+      &:hover
+        background-color: $white-gray
+  
+.content
+  margin-left: 400px  
+  width: calc(100vw - 400px)
+  max-width: 1000px
+  background-color: white
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1)
+  .post
+    clear: both
+    padding: 60px        
+    border-bottom: 1px solid darken($white-gray, 7%)
+    .date      
+    .post-content
+    img
+      &.full-width
+        width: 100%
+      &.half-width
+        width: 50%
+        float: left
+        margin-right: 1em
+        margin-bottom: 1em
+
+@media only screen and (max-width: 1000px)
+  .left
+    position: relative
+    display: block
+    width: 100%
+    height: max-content
+    padding-bottom: 0
+    border: 1px solid $white-gray
+  .content
+    margin: 0
+    width: 100%
+
+
+
+
