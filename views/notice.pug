@@ -4,14 +4,14 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title ONDA BLOG    
+    title ONDA Notice
     link(rel='stylesheet', href='/styles/global.css', type='text/css')
     script(src='/js/blog.js')
   body
     .left
       h1
         img.logo(src='/images/logo.svg')
-        |  BLOG
+        |  NOTICE
       ul.post-nav
         each post in data.objects
           li= post.title

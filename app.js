@@ -29,8 +29,23 @@ app.get('/', function (req, res){
   });
 });
 
-
-
+app.get('/notice', function (req, res){
+  request({
+    uri: 'https://api.cosmicjs.com/v1/01851310-976c-11e7-b522-ebf78181a6d4/object-type/notices',
+    qs: {
+      pretty: true,
+      hide_metafields: true
+    },
+    json: true
+  })
+  .then(data => {
+    console.log(data);
+    res.render('index', { data });
+  })
+  .catch(err => {
+    console.log(err);
+  });
+});
 
 
 app.listen(3000, function () {
