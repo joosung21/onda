@@ -15,7 +15,7 @@ ul
   list-style: none
 
 body
-  background-color: #f1f1f1
+  background-color: white
   font-size: 13pt
   *
     color: #444444
@@ -34,12 +34,11 @@ p
     color: $blue
 
 .left
-  position: fixed  
-  min-width: 399px
+  float: left
+  width: 400px
   height: 100vh
   background: white
-  padding: 60px
-  border-right: 1px solid darken($white-gray, 7%)
+  padding: 60px  
   h1
     font-weight: lighter
     .logo
@@ -47,6 +46,7 @@ p
   .post-nav
     margin: 2rem 0
     li
+      font-size: 11pt
       padding: 0.5rem 0
       cursor: default
       transition: all .2s
@@ -54,7 +54,7 @@ p
         background-color: $white-gray
   
 .content
-  margin-left: 400px  
+  float: left  
   width: calc(100vw - 400px)
   max-width: 1000px
   background-color: white
@@ -86,6 +86,14 @@ p
     margin: 0
     width: 100%
 
+nav
+  a
+    text-decoration: none
+    display: inline-block
+    padding: 10px 20px
+    &.active
+      background-color: #58a9fe
+      color: white
 
 
 

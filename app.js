@@ -39,8 +39,8 @@ app.get('/notice', function (req, res){
     json: true
   })
   .then(data => {
-    console.log(data);
-    res.render('index', { data });
+    // console.log(data);
+    res.render('notice', { data });
   })
   .catch(err => {
     console.log(err);

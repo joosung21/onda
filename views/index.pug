@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title ONDA BLOG    
-    link(rel='stylesheet', href='/styles/global.css', type='text/css')
-    script(src='/js/blog.js')
-  body
-    .left
-      h1
-        img.logo(src='/images/logo.svg')
-        |  BLOG
-      ul.post-nav
-        each post in data.objects
-          li= post.title
-
-    .content
+include includes/header.pug
+body(name='blog')
+  include includes/topmenu.pug
+  .left
+    h1
+      img.logo(src='/images/logo.svg')
+      |  BLOG
+    ul.post-nav
       each post in data.objects
-        .post
-          h2.post-title= post.title
-          .date #{moment(post.created_at).format('YYYY-MM-DD h:mma')}
-          .post-content!= post.content
+        li= post.title
+
+  .content
+    each post in data.objects
+      .post
+        h2.post-title= post.title
+        .date #{moment(post.created_at).format('YYYY-MM-DD h:mma')}
+        .post-content!= post.content
